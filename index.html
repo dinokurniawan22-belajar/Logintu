@@ -29,7 +29,6 @@
             min-height: 100vh;
         }
 
-        /* Container utama simulasi layar HP */
         .phone-container {
             width: 100%;
             max-width: 450px;
@@ -42,18 +41,15 @@
             align-items: center;
         }
 
-        /* Bagian Header Penampung Logo & Judul */
         .header-section {
             width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center; 
             text-align: center;
-            margin-top: 0px; 
             margin-bottom: 20px; 
         }
 
-        /* Pembungkus Lingkaran Logo Sekolah */
         .logo-box {
             width: 95px; 
             height: 95px;
@@ -106,42 +102,42 @@
             box-shadow: 2px 2px 0px #000000;
         }
 
-        /* Grid Menu Navigasi */
+        /* GRID MENU UTAMA */
         .menu-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 12px;
             width: 100%;
-            position: relative;
-            z-index: 10; /* Memastikan grid menu berada di lapisan atas agar bisa diklik */
         }
 
-        /* Desain Tombol Menu */
+        /* TOMBOL MENU DIUBAH MENJADI BLOCK & CURSOR DIPAKSA TANGAN */
         .menu-card {
             background-color: #ffffff; 
             border: 3px solid #000000; 
             border-radius: 12px;
-            display: flex;
+            display: flex !important;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             padding: 14px 10px;
-            text-decoration: none;
-            color: #000000; 
+            text-decoration: none !important;
+            color: #000000 !important; 
             text-align: center;
             box-shadow: 4px 4px 0px #000000; 
-            transition: transform 0.1s ease, box-shadow 0.1s ease;
-            cursor: pointer; /* Memaksa pointer tangan muncul saat disentuh/diarahkan */
-            position: relative;
+            transition: all 0.1s ease;
+            cursor: pointer !important;
         }
 
-        /* Efek ketika menu ditekan */
         .menu-card:active {
             transform: translate(2px, 2px);
             box-shadow: 1px 1px 0px #000000;
         }
 
-        /* Wadah Ikon */
+        /* Mencegah icon & teks menangkap sensor sentuh jari, sentuhan langsung tembus ke link <a> */
+        .icon-box, .card-text {
+            pointer-events: none !important;
+        }
+
         .icon-box {
             width: 42px;
             height: 42px;
@@ -154,7 +150,6 @@
             margin-bottom: 8px;
             color: #ffffff; 
             box-shadow: 2px 2px 0px #000000;
-            pointer-events: none; /* Mencegah ikon memblokir klik pada tag A */
         }
 
         .bg-web { background-color: #0052cc; }       
@@ -164,16 +159,13 @@
         .bg-unduh { background-color: #008080; }     
         .bg-assembler { background-color: #333333; } 
 
-        /* Ukuran Teks Menu */
         .card-text {
             font-size: 0.8rem;
             font-weight: 800; 
             line-height: 1.2;
             color: #000000;
-            pointer-events: none; /* Mencegah teks memblokir klik pada tag A */
         }
 
-        /* Footer */
         .footer-section {
             margin-top: auto;
             width: 100%;
@@ -212,42 +204,42 @@
 
         <div class="menu-grid">
             
-            <a href="https://www.smpn65batam.sch.id/" class="menu-card" target="_blank">
+            <a href="https://www.smpn65batam.sch.id/" class="menu-card" target="_self">
                 <div class="icon-box bg-web">
                     <i class="fa-solid fa-globe"></i>
                 </div>
                 <div class="card-text">Web Sekolah</div>
             </a>
             
-            <a href="https://www.google.com" class="menu-card" target="_blank">
+            <a href="#" class="menu-card" target="_self">
                 <div class="icon-box bg-literasi">
                     <i class="fa-solid fa-book-open"></i>
                 </div>
                 <div class="card-text">Literasi Digital</div>
             </a>
 
-            <a href="https://www.google.com" class="menu-card" target="_blank">
+            <a href="#" class="menu-card" target="_self">
                 <div class="icon-box bg-jadwal">
                     <i class="fa-solid fa-calendar-days"></i>
                 </div>
                 <div class="card-text">Jadwal Pelajaran</div>
             </a>
             
-            <a href="https://www.smpn65batam.sch.id/p/halaman-ujian.html" class="menu-card" target="_blank">
+            <a href="https://www.smpn65batam.sch.id/p/halaman-ujian.html" class="menu-card" target="_self">
                 <div class="icon-box bg-cbt">
                     <i class="fa-solid fa-file-signature"></i>
                 </div>
                 <div class="card-text">CBT Exam Browser</div>
             </a>
 
-            <a href="https://www.google.com" class="menu-card" target="_blank">
+            <a href="#" class="menu-card" target="_self">
                 <div class="icon-box bg-unduh">
                     <i class="fa-solid fa-cloud-arrow-down"></i>
                 </div>
                 <div class="card-text">Unduh Buku</div>
             </a>
             
-            <a href="https://www.google.com" class="menu-card" target="_blank">
+            <a href="#" class="menu-card" target="_self">
                 <div class="icon-box bg-assembler">
                     <i class="fa-solid fa-cubes"></i>
                 </div>
